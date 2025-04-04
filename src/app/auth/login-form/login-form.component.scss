@@ -1,0 +1,22 @@
+.full-width {
+    width: 100%;
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  
+  .switch-text {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+  
+    a {
+      color: #3f51b5;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+  

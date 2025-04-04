@@ -1,0 +1,40 @@
+<div class="header-box">
+    <p>just<span>bus</span></p>
+    <div class="box">
+        <img src="../../../assets/bus.png" alt="">
+        <h4>Buses</h4>
+    </div>
+    <div class="box">
+        <img src="../../../assets/train.png" alt="">
+        <h4>Trains</h4>
+    </div>
+    <div class="box">
+        <img src="../../../assets/flight.png" alt="">
+        <h4>Flight</h4>
+    </div>
+    <div class="box">
+        <img src="../../../assets/hotel.png" alt="">
+        <h4>Hotels</h4>
+    </div>
+    <div class="box">
+        <img src="../../../assets/discount.png" alt="">
+        <h4>Offers</h4>
+    </div>
+    <div class="box">
+        <img src="../../../assets/ticket.png" alt="">
+        <h4>Track Ticket</h4>
+    </div>
+    <div class="box">
+        <img src="../../../assets/customer-service.png" alt="">
+        <h4>Customer Care</h4>
+    </div>
+    <div class="box" (click)="openAuthModal()">
+        <img src="../../../assets/profile.png" alt="">
+        @if (!login) {
+            <h4>login / sign up</h4>
+        }
+        @else {
+            <h4>logout</h4>
+        }
+    </div>
+</div>

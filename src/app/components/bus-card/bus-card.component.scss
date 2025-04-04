@@ -1,0 +1,80 @@
+.fixed-width {
+    width: 80px;
+}
+
+.button-width {
+    width: 2rem;
+}
+
+
+
+.seat-layout-details {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    unicode-bidi: isolate;
+    border-spacing: 2px;
+    border-color: gray;
+}
+
+.tooltip-swap {
+    display: inline-block;
+    position: relative;
+}
+
+.seat {
+    margin: .15rem;
+    background: none;
+    border: none;
+    // cursor: pointer;
+    font-size: .625rem;
+    padding: 0;
+    position: relative;
+
+}
+
+.point {
+    cursor: default;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.point.booked,
+.point.space {
+    cursor: default;
+}
+
+.blank-button {
+    margin: .15rem;
+    background: none;
+    border: none;
+    cursor: none;
+    padding: 0;
+    position: relative;
+}
+
+.header {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem;
+    height: 7rem;
+    // padding-left: .15rem;
+
+    span {
+        rotate: 180deg;
+        writing-mode: vertical-rl;
+    }
+
+    svg {
+        rotate: -90deg;
+    }
+}
+
+.right-column {
+    font-size: 0.8rem;
+}

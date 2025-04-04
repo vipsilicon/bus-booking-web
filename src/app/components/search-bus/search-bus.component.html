@@ -1,0 +1,44 @@
+<div class="search-wall">
+    <div class="container">
+        <p class="d-flex justify-content-center mt-3 text-info fs-1 fw-bold">Book Bus Tickets</p>
+        <div class="card border-dark">
+            <div class="card-body">
+                <div class="d-flex justify-content-evenly">
+                    <div class="input-group m-2">
+                        <span class="input-group-text">
+                            <i class="bi bi-bus-front"></i>
+                        </span>
+                        <!-- <input type="text" class="form-control" placeholder="Pick Up Point"> -->
+                        <select class="form-select" [(ngModel)]="pickUpPoint">
+                            <option selected>Pick Up Point</option>
+                            @for (city of filterPickUpPoint(); track $index) {
+                                <option [value]="city.city">{{city.city}}</option>
+                            }
+                        </select>
+                    </div>
+                    <button class="btn btn-secondary m-2" type="button" (click)="swapCities()">
+                        <i class="bi bi-arrow-left-right"></i>
+                    </button>
+                    <div class="input-group m-2">
+                        <span class="input-group-text">
+                            <i class="bi bi-bus-front"></i>
+                        </span>
+                        <!-- <input type="text" class="form-control" placeholder="Drop Down Point"> -->
+                        <select class="form-select" [(ngModel)]="dropDownPoint">
+                            <option selected>Drop Down Point</option>
+                            @for (city of filterDropDownPoint() ; track $index) {
+                                <option [value]="city.city">{{city.city}}</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="input-group date m-2" data-provide="datepicker">
+                        <input type="date" class="form-control" placeholder="Pick Date" id="dateInput">
+                    </div>
+                    <button class="btn btn-outline-danger m-2" type="button">Today</button>
+                    <button class="btn btn-outline-danger m-2" type="button">Tomorrow</button>
+                    <button class="btn btn-danger m-2" type="button">Search</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
