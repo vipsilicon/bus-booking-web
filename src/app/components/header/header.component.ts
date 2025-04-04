@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { LoginFormComponent } from '../../auth/login-form/login-form.component';
 import { AuthService } from '../../services/auth.service'; 
 import { LocalStorageService } from '../../services/local-storage.service';
+import { SnackBarService } from '../../services/snack-bar.service'; 
 
 @Component({
   selector: 'app-header',
@@ -18,7 +19,8 @@ export class HeaderComponent {
   constructor(
     private dialog: MatDialog,
     private authService: AuthService,
-    private localStorageService: LocalStorageService
+    private localStorageService: LocalStorageService,
+    private snackBarService: SnackBarService
   ){}
   openAuthModal(){
     if(!this.login){
@@ -41,6 +43,7 @@ export class HeaderComponent {
             console.log("Logout completed" + response);
             this.localStorageService.clearUserData();
             this.login = false;
+            this.snackBarService.showMessage('Logged out successfully', 'OK');
           },
           error: (error) => {
             console.error('Logout error:', error);

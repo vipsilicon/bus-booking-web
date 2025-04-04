@@ -3,14 +3,21 @@ import { RouterOutlet } from '@angular/router';
 import { LoginFormComponent } from './auth/login-form/login-form.component';
 import { HeaderComponent } from './components/header/header.component'; 
 import { FooterComponent } from './components/footer/footer.component'; 
-// import { SearchBusComponent } from './components/search-bus/search-bus.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
+const importModules = [
+  RouterOutlet, 
+  HeaderComponent, 
+  FooterComponent, 
+  HttpClientModule,
+  MatSnackBarModule
+];
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, FooterComponent, HttpClientModule ],
+  imports: [...importModules],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

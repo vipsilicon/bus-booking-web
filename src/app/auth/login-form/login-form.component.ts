@@ -13,7 +13,7 @@ import {
 import { AuthService } from '../../services/auth.service';
 import { LocalStorageService } from '../../services/local-storage.service';
 import { CommonModule } from '@angular/common';
-
+import { SnackBarService } from '../../services/snack-bar.service';
 
 const importModules = [
   MatDialogModule,
@@ -43,7 +43,8 @@ export class LoginFormComponent {
     private fb: FormBuilder,
     private dialogRef: MatDialogRef<LoginFormComponent>,
     private authService: AuthService,
-    private localStorageService: LocalStorageService
+    private localStorageService: LocalStorageService,
+    private snackBarService: SnackBarService
   ){
     this.authForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
@@ -76,6 +77,7 @@ export class LoginFormComponent {
             const user = JSON.stringify(response);
             this.localStorageService.saveUserData(user);
             this.dialogRef.close(this.authForm.value);
+            this.snackBarService.showMessage('Login successful', 'OK');
           },
           error: (error) => {
             console.error('Login error:', error);
@@ -87,6 +89,7 @@ export class LoginFormComponent {
           next: (response) => {
             // console.log('Signup success:', response);
             this.dialogRef.close(this.authForm.value);
+            this.snackBarService.showMessage('Signup successful', 'OK');
           },
           error: (error) => {
             console.error('Signup error:', error);
@@ -95,8 +98,6 @@ export class LoginFormComponent {
         });
       }
     }
-    
-    // this.dialogRef.close(this.authForm.value);
   }
 
   closeDialog(){
