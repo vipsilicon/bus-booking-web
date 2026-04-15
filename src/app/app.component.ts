@@ -15,11 +15,10 @@ const importModules = [
 ];
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [...importModules],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+    selector: 'app-root',
+    imports: [...importModules],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'bus-booking-web';

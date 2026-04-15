@@ -39,11 +39,10 @@ interface SeatRows {
 }
 
 @Component({
-  selector: 'app-bus-card',
-  standalone: true,
-  imports: [ CommonModule, MatIconModule ],
-  templateUrl: './bus-card.component.html',
-  styleUrl: './bus-card.component.scss'
+    selector: 'app-bus-card',
+    imports: [CommonModule, MatIconModule],
+    templateUrl: './bus-card.component.html',
+    styleUrl: './bus-card.component.scss'
 })
 export class BusCardComponent implements OnInit{
 

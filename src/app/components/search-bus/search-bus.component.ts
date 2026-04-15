@@ -12,13 +12,12 @@ interface Cities {
 }
 
 @Component({
-  selector: 'app-search-bus',
-  standalone: true,
-  providers: [provideNativeDateAdapter()],
-  imports: [MatDatepickerModule, MatInputModule, MatFormFieldModule, FormsModule],
-  templateUrl: './search-bus.component.html',
-  styleUrl: './search-bus.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'app-search-bus',
+    providers: [provideNativeDateAdapter()],
+    imports: [MatDatepickerModule, MatInputModule, MatFormFieldModule, FormsModule],
+    templateUrl: './search-bus.component.html',
+    styleUrl: './search-bus.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SearchBusComponent {
 

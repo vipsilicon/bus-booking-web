@@ -26,11 +26,10 @@ const importModules = [
 ];
 
 @Component({
-  selector: 'app-login-form',
-  standalone: true,
-  imports: [...importModules],
-  templateUrl: './login-form.component.html',
-  styleUrl: './login-form.component.scss'
+    selector: 'app-login-form',
+    imports: [...importModules],
+    templateUrl: './login-form.component.html',
+    styleUrl: './login-form.component.scss'
 })
 export class LoginFormComponent {
 

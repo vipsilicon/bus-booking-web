@@ -20,11 +20,10 @@ interface BusTime {
 }
 
 @Component({
-  selector: 'app-bus-search',
-  standalone: true,
-  imports: [ FormsModule, CommonModule, MatSliderModule, BusCardComponent ],
-  templateUrl: './bus-search.component.html',
-  styleUrl: './bus-search.component.scss'
+    selector: 'app-bus-search',
+    imports: [FormsModule, CommonModule, MatSliderModule, BusCardComponent],
+    templateUrl: './bus-search.component.html',
+    styleUrl: './bus-search.component.scss'
 })
 export class BusSearchComponent {
 
