@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
+
 import { MatSliderModule } from '@angular/material/slider';
 import { BusCardComponent, BusCardData } from '../bus-card/bus-card.component';
 
@@ -21,7 +21,7 @@ interface BusTime {
 
 @Component({
     selector: 'app-bus-search',
-    imports: [FormsModule, CommonModule, MatSliderModule, BusCardComponent],
+    imports: [FormsModule, MatSliderModule, BusCardComponent],
     templateUrl: './bus-search.component.html',
     styleUrl: './bus-search.component.scss'
 })

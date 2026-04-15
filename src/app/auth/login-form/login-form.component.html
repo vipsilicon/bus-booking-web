@@ -11,10 +11,12 @@
       <input matInput formControlName="password" type="password" />
     </mat-form-field>
 
-    <mat-form-field *ngIf="!isLogin" appearance="outline" class="full-width">
-      <mat-label>Confirm Password</mat-label>
-      <input matInput formControlName="confirmPassword" type="password" />
-    </mat-form-field>
+    @if (!isLogin) {
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Confirm Password</mat-label>
+        <input matInput formControlName="confirmPassword" type="password" />
+      </mat-form-field>
+    }
 
     <div class="actions">
       <button mat-button (click)="closeDialog()">Cancel</button>
